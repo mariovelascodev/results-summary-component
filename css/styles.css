@@ -1,0 +1,329 @@
+/*Font*/
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+:root {
+    /*Primary*/
+    --Light_red: hsl(0, 100%, 67%);
+    --Light_red_alfa: hsl(0, 100%, 67%, 0.11);
+    --Orangey_yellow: hsl(39, 100%, 56%);
+    --Orangey_yellow_alfa: hsl(39, 100%, 56%, 0.11);
+    --Green_teal: hsl(166, 100%, 37%);
+    --Green_teal_alfa: hsl(166, 100%, 37%, 0.11);
+    --Cobalt_blue: hsl(234, 85%, 45%);
+    --Cobalt_blue_alfa: hsl(234, 85%, 45%, 0.11);
+
+    /*Gradients*/
+    /*Background*/
+    --Light_slate_blue: hsl(252, 100%, 67%);
+    --Light_royal_blue: hsl(241, 81%, 54%);
+    /*Circle*/
+    --Violet_blue: hsla(256, 72%, 46%, 1);
+    --Persian_blue: hsla(241, 72%, 46%, 0);
+
+    /*Neutral*/
+    --White: hsl(0, 0%, 100%);
+    --Pale_blue: hsl(221, 100%, 96%);
+    --Light_lavender: hsl(241, 100%, 89%);
+    --Dark_gray_blue: hsl(224, 30%, 27%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+.result {
+    background-image: linear-gradient(var(--Light_slate_blue), var(--Light_royal_blue));
+    border-radius: 0 0 10% 10%;
+}
+
+.result article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 1rem;
+}
+
+.result .title {
+    align-self: center;
+    color: var(--Light_lavender);
+}
+
+.result .your-score {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    align-self: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-image: linear-gradient(var(--Violet_blue), var(--Persian_blue));
+    color: var(--Light_lavender);
+    margin: 1rem auto;
+}
+
+.result .your-score span {
+    display: block;
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--Pale_blue);
+}
+
+.result .your-score p {
+    text-align: center;
+    color: var(--Dark_gray_blue);
+}
+
+.result h3 {
+    align-self: center;
+    color: var(--White);
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.result .message {
+    text-align: center;
+    color: var(--Light_lavender);
+    padding: 1rem;
+    font-size: 15px;
+}
+
+.ability {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.ability h2 {
+    margin: 1rem 2rem;
+}
+
+.ability .block {
+    margin: 1rem 2rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.ability .name-ability {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.ability .name-ability img {
+    display: inline;
+    margin-right: 0.5rem;
+}
+
+.ability .name-ability p {
+    display: inline;
+}
+
+.ability p {
+    font-size: 15px;
+    color: var(--Light_lavender);
+    font-weight: 700;
+}
+
+.ability p span {
+    color: black;
+    font-size: 15px;
+}
+
+.ability .reaction {
+    background: var(--Light_red_alfa);
+}
+
+.reaction .name-ability p {
+    color: var(--Light_red);
+}
+
+.ability .memory {
+    background: var(--Orangey_yellow_alfa);
+}
+
+.memory .name-ability p {
+    color: var(--Orangey_yellow);
+}
+
+.ability .verbal {
+    background: var(--Green_teal_alfa);
+}
+
+.verbal .name-ability p {
+    color: var(--Green_teal);
+}
+
+.ability .visual {
+    background: var(--Cobalt_blue_alfa);
+}
+
+.visual .name-ability p {
+    color: var(--Cobalt_blue);
+}
+
+.ability .btn-continue {
+    border: none;
+    border-radius: 33px;
+    padding: 0.8rem;
+    color: var(--White);
+    background-color: var(--Dark_gray_blue);
+    font-weight: 700;
+    justify-content: center;
+    align-content: center;
+    cursor: pointer;
+}
+
+.attribution {
+    text-align: center;
+}
+
+.attribution p {
+    font-size: 14px;
+}
+
+.attribution a {
+    font-size: 14px;
+    color: var(--Cobalt_blue);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.attribution a:hover {
+    color: var(--Light_red);
+}
+
+.attribution a:visited {
+    color: var(--Dark_gray_blue);
+}
+
+/*Responsive design*/
+/* xs */
+@media (min-width: 475px) {
+    h2 {
+        font-size: 18px;
+    }
+
+    .result .message {
+        font-size: 18px;
+    }
+
+    .ability h2 {
+        margin: 1rem 3rem;
+    }
+
+    .ability .block {
+        margin: 1rem 3rem;
+    }
+
+}
+
+/* sm */
+@media (min-width: 640px) {}
+
+/* md */
+@media (min-width: 768px) {
+    h2 {
+        margin-bottom: 1rem;
+    }
+
+    .result article {
+        padding: 2rem;
+    }
+
+    .ability h2 {
+        margin: 1.5rem 4rem;
+    }
+
+    .ability .block {
+        margin: 1.5rem 4rem;
+    }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        max-width: 1024px;
+        margin: 4rem auto;
+    }
+
+    .result {
+        width: 28%;
+        border-radius: 10%;
+    }
+
+    .result .your-score {
+        width: 160px;
+        height: 160px;
+    }
+
+    .result .your-score span {
+        font-size: 3.5rem;
+    }
+
+    .result .your-score p {
+        font-size: 15px;
+    }
+
+    .result .message {
+        font-size: 13px;
+    }
+
+    .ability {
+        border-radius: 0 10% 10% 0;
+        box-shadow: 5px 5px 10px var(--Light_lavender);
+        width: 30%;
+    }
+
+    .ability h2 {
+        margin: 0.5rem 2rem;
+    }
+
+    .ability .block {
+        margin: 0.5rem 2rem;
+    }
+
+    .ability .btn-continue {
+        margin-top: 1.3rem;
+        margin-bottom: 1.3rem;
+        font-size: 15px;
+    }
+}
+
+/* xl */
+@media (min-width: 1280px) {
+    .container {
+        margin: 8rem auto;
+    }
+}
+
+/* 2xl */
+@media (min-width: 1536px) {
+    .container {
+        margin: 11rem auto;
+    }
+
+    .attribution p {
+        font-size: 18px;
+    }
+
+    .attribution a {
+        font-size: 18px;
+    }
+}
